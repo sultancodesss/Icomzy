@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Booking Confirmed</title>
+  <link rel="stylesheet" href="confirmed.css" />
+</head>
+<body>
+  <div class="confirmation-card">
+    <div class="success-icon"></div>
+    <h1>Your Booking is Confirmed!</h1>
+    <p class="thank-you">Thank you for booking with us. Your request has been received.</p>
+
+    <div class="section-title">Booking details</div>
+
+    <div class="info-row">
+      <span class="label">Booking ID</span>
+      <span class="value" id="bookingId"></span>
+    </div>
+    <div class="info-row">
+      <span class="label">Name</span>
+      <span class="value" id="cName"></span>
+    </div>
+    <div class="info-row">
+      <span class="label">Email</span>
+      <span class="value" id="cEmail"></span>
+    </div>
+    <div class="info-row">
+      <span class="label">Phone</span>
+      <span class="value" id="cPhone"></span>
+    </div>
+    <div class="info-row">
+      <span class="label">Service</span>
+      <span class="value" id="cService"></span>
+    </div>
+    <div class="info-row">
+      <span class="label">Date</span>
+      <span class="value" id="cDate"></span>
+    </div>
+    <div class="info-row">
+      <span class="label">Time</span>
+      <span class="value" id="cTime"></span>
+    </div>
+    <div class="info-row">
+      <span class="label">File</span>
+      <span class="value" id="cFile"></span>
+    </div>
+    <div class="info-row">
+      <span class="label">Notes</span>
+      <span class="value" id="cNotes"></span>
+    </div>
+
+    <div class="email-notification">
+      <p>We’ve sent a confirmation email with your booking details.</p>
+    </div>
+
+    <div class="button-container">
+      <button class="btn btn-primary" onclick="goToDashboard()">Go to dashboard</button>
+      <button class="btn btn-secondary" onclick="bookAnother()">Book another</button>
+      <button class="btn btn-secondary" onclick="printConfirmation()">Print</button>
+    </div>
+
+    <div class="footer">
+      <div class="company-name">Icomzy Services</div>
+      <div class="contact-info">hello@icomzy.com  · +91-XXXX-XXXXXX</div>
+    </div>
+  </div>
+
+  <script src="confirmed.js"></script>
+</body>
+</html>

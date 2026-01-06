@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Your Service</title>
+  <link rel="stylesheet" href="booking.css" />
+</head>
+<body>
+  <div class="form-container">
+    <h2>Book Your Service</h2>
+
+    <form id="serviceForm">
+      <label>Full Name</label>
+      <input type="text" id="name" placeholder="Mohd Sultan" required />
+
+      <label>Email Address</label>
+      <input type="email" id="email" placeholder="sultan@example.com" required />
+
+      <label>Phone Number</label>
+      <input type="tel" id="phone" placeholder="+91 1234567890" required />
+
+      <label>Service Type</label>
+      <select id="service" required>
+        <option disabled selected>Select a service...</option>
+        <option>Web Services</option>
+        <option>Cloud Infrastructure</option>
+        <option>Cyber Security</option>
+         <option>IT Solution</option>
+          <option>Ecommerce Setup</option>
+      </select>
+
+      <label>Preferred Date</label>
+      <input type="date" id="date" required />
+
+      <label>Preferred Time</label>
+      <input type="time" id="time" required />
+
+      <label>File Upload (Optional)</label>
+      <input type="file" id="fileUpload" />
+
+      <label>Additional Notes</label>
+      <textarea id="notes" placeholder="Tell us more about your requirements..."></textarea>
+
+      <button type="submit">Submit Booking Request</button>
+    </form>
+  </div>
+
+  <script src="booking.js"></script>
+</body>
+</html>
