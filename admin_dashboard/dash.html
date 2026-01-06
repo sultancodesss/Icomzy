@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ServiceHub | Dashboard Overview</title>
+  <link rel="stylesheet" href="dash.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- SIDEBAR -->
+
+  <aside class="sidebar">
+    <div class="brand">ServiceHub<span>Admin Panel</span></div>
+    <nav class="nav">
+      <a class="active">Dashboard</a>
+      <a>Bookings</a>
+      <a>Services</a>
+      <a>Clients</a>
+      <a>Messages</a>
+      <a>Settings</a>
+    </nav>
+    <div class="logout" id="logoutBtn">Logout</div>
+
+  </aside>
+
+  <!-- MAIN -->
+
+  <main class="main">
+    <div class="topbar">
+      <input class="search" placeholder="Search bookings, clients, services...">
+      <div class="user">
+        <div>
+          <strong>Mohd Sultan</strong><br>
+          <small>Administrator</small>
+        </div>
+        <div class="avatar">MS</div>
+      </div>
+    </div>
+
+    <h1>Dashboard Overview</h1>
+    <p class="subtitle">Welcome back! Here's what's happening with your business today.</p>
+
+    <!-- STATS -->
+    <div class="stats">
+      <div class="stat-card">
+        <small>Total Bookings</small>
+        <h2>1,284</h2>
+        <small class="green" style="color: green;">+12%</small>
+      </div>
+      <div class="stat-card">
+        <small>Pending Requests</small>
+        <h2>47</h2>
+      </div>
+      <div class="stat-card">
+        <small>Completed Services</small>
+        <h2>1,156</h2>
+        <small class="green" style="color: green;">+8%</small>
+      </div>
+      <div class="stat-card">
+        <small>New Clients</small>
+        <h2>342</h2>
+      </div>
+    </div>
+
+    <!-- ACTIONS -->
+    <div class="actions">
+      <button class="btn btn-primary">+ Add Service</button>
+      <button class="btn btn-outline">Manage Clients</button>
+      <button class="btn btn-outline">View Analytics</button>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+
+      <!-- RECENT BOOKINGS -->
+      <div class="card">
+        <h3>Recent Bookings</h3>
+        <table>
+          <tr>
+            <th>ID</th>
+            <th>Client</th>
+            <th>Service</th>
+            <th>Status</th>
+          </tr>
+          <tr>
+            <td>#BK-1247</td>
+            <td>Nitish Kumar</td>
+            <td>Cloud Infrastructure</td>
+            <td><span class="status confirmed">Confirmed</span></td>
+          </tr>
+          <tr>
+            <td>#BK-1246</td>
+            <td>Mohit Choudhary</td>
+            <td>Web Development</td>
+            <td><span class="status pending">Pending</span></td>
+          </tr>
+          <tr>
+            <td>#BK-1245</td>
+            <td>Sourav Kumar</td>
+            <td>E-Commerce Solutions</td>
+            <td><span class="status completed">Completed</span></td>
+          </tr>
+          <tr>
+            <td>#BK-1244</td>
+            <td>Sanjay Sen</td>
+            <td>Cybersecurity</td>
+            <td><span class="status confirmed">Confirmed</span></td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- WEEKLY BOOKINGS -->
+      <div class="card">
+        <h3>Weekly Bookings</h3>
+        <p class="subtitle">Last 7 days overview</p>
+        <div class="week-row"><span>Monday</span><span>24</span></div>
+        <div class="week-row"><span>Tuesday</span><span>18</span></div>
+        <div class="week-row"><span>Wednesday</span><span>31</span></div>
+        <div class="week-row"><span>Thursday</span><span>27</span></div>
+        <div class="week-row"><span>Friday</span><span>22</span></div>
+        <div class="week-row"><span>Saturday</span><span>15</span></div>
+        <div class="week-row"><span>Sunday</span><span>12</span></div>
+
+        <div class="highlight">
+          <strong>Peak Day: Wednesday</strong><br>
+          31 bookings this week
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+  <script src="./dash.js"></script>
+</body>
+
+</html>
