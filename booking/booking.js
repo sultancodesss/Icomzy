@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
     const required = [data.name, data.email, data.phone, data.service, data.date, data.time];
     if (required.some(v => !v)) {
-      alert("⚠️ Please fill all required fields.");
+      alert("Please fill all required fields.");
       return;
     }
 

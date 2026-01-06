@@ -64,6 +64,6 @@ if (logoutBtn) {
     localStorage.removeItem("icomzy_user");
     localStorage.removeItem("icomzy_pass");
     alert("Logged out successfully");
-    window.location.href = "/login/login.html";
+    window.location.href = "/home_page/index.html";
   });
 }
