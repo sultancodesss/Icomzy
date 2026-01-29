@@ -50,11 +50,13 @@ if (logoutBtn) {
     localStorage.removeItem("icomzy_user");
     localStorage.removeItem("icomzy_pass");
     alert("Logged out successfully");
-    window.location.href = "../index.html";
+    window.location.href = "/home_page/index.html";
   });
 }
 
-
+/* ================================
+   NEW LOGIC: APPEND BOOKINGS
+   ================================ */
 
 document.addEventListener("DOMContentLoaded", () => {
   const bookings = JSON.parse(localStorage.getItem("bookings")) || [];
@@ -76,3 +78,11 @@ document.addEventListener("DOMContentLoaded", () => {
     table.appendChild(row);
   });
 });
+
+const manageClientsBtn = document.getElementById("manageClientsBtn");
+
+if (manageClientsBtn) {
+  manageClientsBtn.addEventListener("click", () => {
+    window.location.href = "client.html";
+  });
+}

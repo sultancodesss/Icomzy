@@ -1,6 +1,4 @@
-function goToDashboard() {
-  window.location.href = "../admin_dashboard/dash.html";
-}
+
 
 function bookAnother() {
   window.location.href = "booking.html";
