@@ -1,4 +1,3 @@
-
 const menuLinks = document.querySelectorAll('.nav a');
 
 menuLinks.forEach(link => {
@@ -8,17 +7,15 @@ menuLinks.forEach(link => {
   });
 });
 
-
 const searchInput = document.querySelector('.search');
-const tableRows = document.querySelectorAll('table tr');
 
 if (searchInput) {
   searchInput.addEventListener('keyup', () => {
     const value = searchInput.value.toLowerCase();
+    const rows = document.querySelectorAll('table tr');
 
-    tableRows.forEach((row, index) => {
-      if (index === 0) return; 
-
+    rows.forEach((row, index) => {
+      if (index === 0) return;
       const text = row.innerText.toLowerCase();
       row.style.display = text.includes(value) ? '' : 'none';
     });
@@ -33,16 +30,6 @@ if (addServiceBtn) {
   });
 }
 
-
-const statuses = document.querySelectorAll('.status');
-
-statuses.forEach(status => {
-  status.addEventListener('click', () => {
-    alert('Current status: ' + status.innerText);
-  });
-});
-
-
 const cards = document.querySelectorAll('.stat-card, .card');
 
 cards.forEach(card => {
@@ -56,7 +43,6 @@ cards.forEach(card => {
   });
 });
 
-
 const logoutBtn = document.getElementById("logoutBtn");
 
 if (logoutBtn) {
@@ -64,6 +50,29 @@ if (logoutBtn) {
     localStorage.removeItem("icomzy_user");
     localStorage.removeItem("icomzy_pass");
     alert("Logged out successfully");
-    window.location.href = "/home_page/index.html";
+    window.location.href = "../index.html";
   });
 }
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const bookings = JSON.parse(localStorage.getItem("bookings")) || [];
+  if (!bookings.length) return;
+
+  const table = document.querySelector("table");
+  if (!table) return;
+
+  bookings.forEach(booking => {
+    const row = document.createElement("tr");
+
+    row.innerHTML = `
+      <td>${booking.id}</td>
+      <td>${booking.name}</td>
+      <td>${booking.service}</td>
+      <td><span class="status pending">${booking.status}</span></td>
+    `;
+
+    table.appendChild(row);
+  });
+});
