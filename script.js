@@ -42,11 +42,10 @@ const navBtn = document.getElementById("navBtn");
 
 if (navBtn) {
   navBtn.addEventListener("click", () => {
-    document.querySelector(".cta-section")?.scrollIntoView({
-      behavior: "smooth"
-    });
+    window.location.href = "/booking/booking.html";
   });
 }
+
 
 
 const primaryBtn = document.getElementById("h-primary");

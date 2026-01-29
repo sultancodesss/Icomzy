@@ -1,20 +1,6 @@
 
-function generateBookingId() {
-  const date = new Date();
-  const year = date.getFullYear();
-  const month = String(date.getMonth() + 1).padStart(2, '0');
-  const day = String(date.getDate()).padStart(2, '0');
-  const random = Math.floor(Math.random() * 1000);
-  return `#BK-${year}-${month}${day}-${random}`;
-}
-
-function goToDashboard() {
-  alert('Dashboard pe ja rahe hain...');
- 
-}
 
 function bookAnother() {
-  localStorage.removeItem("bookingData");
   window.location.href = "booking.html";
 }
 
@@ -23,19 +9,18 @@ function printConfirmation() {
 }
 
 window.addEventListener("load", () => {
-  
-  const raw = localStorage.getItem("bookingData");
-  if (!raw) {
-    
+  const bookings = JSON.parse(localStorage.getItem("bookings")) || [];
+
+  if (bookings.length === 0) {
     alert("No booking data found. Redirecting to booking page.");
     window.location.href = "booking.html";
     return;
   }
 
-  const data = JSON.parse(raw);
+  // Get latest booking
+  const data = bookings[bookings.length - 1];
 
-
-  document.getElementById("bookingId").textContent = generateBookingId();
+  document.getElementById("bookingId").textContent = data.id;
   document.getElementById("cName").textContent = data.name || "-";
   document.getElementById("cEmail").textContent = data.email || "-";
   document.getElementById("cPhone").textContent = data.phone || "-";
@@ -45,7 +30,7 @@ window.addEventListener("load", () => {
   document.getElementById("cFile").textContent = data.fileName || "No file";
   document.getElementById("cNotes").textContent = data.notes || "-";
 
-  
+  // animation (kept exactly as is)
   const card = document.querySelector(".confirmation-card");
   card.style.opacity = "0";
   card.style.transform = "translateY(20px)";
